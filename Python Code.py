@@ -31,7 +31,12 @@ while(reader.readline()!=""):
     if line.count("1995") != 0:
         current += 1
         total += 1
-
+    #Searches for 400 failed requests
+    if re.search("\".*\" 4..", line) != None:
+        failed_requests += 1
+    #Searches for 300 failed redirects
+    if re.search("\".*\" 3..", line) != None:
+        redirected += 1
 
 
 print("The total amount of requests are:",total)
