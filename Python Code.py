@@ -30,7 +30,6 @@ while(reader.readline()!=""):
         current += 1
         total += 1
 
-#add my code here
 
 print("The total amount of requests are:",total)
 print("This is the total amount of requests in the last year (1995):",current)
