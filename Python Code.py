@@ -19,6 +19,10 @@ reader.seek(0)
 line_number = reader.tell()
 total = 0
 current = 0
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 failed_requests = 0
 redirected = 0
 while(reader.readline()!=""):
@@ -36,12 +40,25 @@ while(reader.readline()!=""):
         failed_requests += 1
     if re.search("\".*\" 3..", line) != None:
         redirected += 1
+<<<<<<< Updated upstream
 
 print("The total amount of requests are:",total)
 print("This is the total amount of requests in the last year (1995):",current)
+=======
+
+
+print("The total amount of requests are:",total)
+print("This is the total amount of requests in the last year (1995):",current)
+
+>>>>>>> Stashed changes
 print("Percentage of failed requests:",round(failed_requests/total*100,3),"%")
 print("Percentage of redirects:",round(redirected/total*100,3),"%")
 reader.close()
+
+
+
+
+
 
 
 
