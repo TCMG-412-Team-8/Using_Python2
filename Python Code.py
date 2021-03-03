@@ -1,6 +1,6 @@
 import os.path
 import requests
-
+import re
 if os.path.isfile('logfile.log'):
     print ("Opening File")
 else:
@@ -19,6 +19,8 @@ reader.seek(0)
 line_number = reader.tell()
 total = 0
 current = 0
+failed_requests = 0
+redirected = 0
 while(reader.readline()!=""):
     reader.seek(line_number)
     line = reader.readline()
@@ -34,7 +36,8 @@ while(reader.readline()!=""):
 
 print("The total amount of requests are:",total)
 print("This is the total amount of requests in the last year (1995):",current)
-
+print("Percentage of failed requests:",round(failed_requests/total*100,3),"%")
+print("Percentage of redirects:",round(redirected/total*100,3),"%")
 reader.close()
 
 
