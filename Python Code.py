@@ -19,7 +19,6 @@ reader.seek(0)
 line_number = reader.tell()
 total = 0
 current = 0
-
 while(reader.readline()!=""):
     reader.seek(line_number)
     line = reader.readline()
@@ -32,8 +31,10 @@ while(reader.readline()!=""):
         total += 1
 
 
+
 print("The total amount of requests are:",total)
 print("This is the total amount of requests in the last year (1995):",current)
+
 reader.close()
 
 
