@@ -24,7 +24,7 @@ for line in open('logfile.log')
     try:
         bymonth = monthly.groups()
     except AttributeError
-        bymonth = 
+        bymonth = monthly
     if bymonth in Regexp:
         Regexp[bymonth] += 1
     else:
