@@ -10,12 +10,12 @@ Regexp ={}
 for line in open('logfile.log'):
     match = re.search(pattern, line)
     try:
-        date = match.groups()
+        filename = match.groups()
     except AttributeError:
-        date = match
-    if date in Regexp:
-        Regexp[date] += 1
+        filename = match
+    if filename in Regexp:
+        Regexp[filename] += 1
     else:
-        Regexp[date] = 1
+        Regexp[filename] = 1
 
 print (Regexp)
