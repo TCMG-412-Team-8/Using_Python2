@@ -3,32 +3,32 @@ from collections import counter
 
 log_line = 'local - - [24/Oct/1994:13:41:41 -0600] "GET index.html HTTP/1.0" 200 150'
 
-pattern= r'\[(]^:]*)'
-month_pattern = r'[A-Z][a-z][a-z]'
+pattern1= r'\[(]^:]*)'
+monthly_pattern = r'[A-Z][a-z][a-z]'
 
 Regexp ={}
 
 for line in open('logfile.log')
-    match = re.search(pattern, line)
+    weekly = re.search(pattern1, line)
     try:
-        date = match.groups()
+        week = weekly.groups()
     except AttributeError:
-        date = match
-    if date in Regexp:
-        Regexp[date] += 7
+        week = weekly
+    if week in Regexp:
+        Regexp[week] += 7
     else:
-        Regexp[date] = 7
+        Regexp[week] = 7
     
 for line in open('logfile.log')
-    month = re.search(month_pattern, line)
+    monthly = re.search(monthly_pattern, line)
     try:
-        month = month.groups()
+        bymonth = bymonth.groups()
     except AttributeError
-        month = match
-    if date in Regexp:
-        Regexp[month] += 1
+        bymonth = 
+    if bymonth in Regexp:
+        Regexp[bymonth] += 1
     else:
-        Regexp[month] = 1
+        Regexp[bymonth] = 1
         
 
 print(Regexp)
