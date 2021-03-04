@@ -1,5 +1,5 @@
 import re
-from collections import counter
+from collections import Counter
 
 log_line = 'local - - [24/Oct/1994:13:41:41 -0600] "GET index.html HTTP/1.0" 200 150'
 
@@ -8,7 +8,7 @@ monthly_pattern = r'[A-Z][a-z][a-z]'
 
 Regexp ={}
 
-for line in open('logfile.log')
+for line in open('logfile.log'):
     weekly = re.search(pattern1, line)
     try:
         week = weekly.groups()
@@ -19,7 +19,7 @@ for line in open('logfile.log')
     else:
         Regexp[week] = 7
     
-for line in open('logfile.log')
+for line in open('logfile.log'):
     monthly = re.search(monthly_pattern, line)
     try:
         bymonth = monthly.groups()
