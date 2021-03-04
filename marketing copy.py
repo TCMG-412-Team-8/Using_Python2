@@ -20,7 +20,7 @@ for line in open('logfile.log'):
         Regexp[date] = 1
 
 
-print(Regexp)
+print('The total number of entries per day are:', Regexp)
 
 
 
