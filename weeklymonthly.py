@@ -22,11 +22,13 @@ for line in open('logfile.log')
 for line in open('logfile.log')
     month = re.search(month_pattern, line)
     try:
-        date = month.groups()
+        month = month.groups()
     except AttributeError
-        date = match
+        month = match
     if date in Regexp:
-        
+        Regexp[month] += 1
+    else:
+        Regexp[month] = 1
         
 
 print(Regexp)
