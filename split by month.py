@@ -1,4 +1,5 @@
 import re
+import math 
 
 log_line = 'local - - [24/Oct/1994:13:41:41 -0600] "GET index.html HTTP/1.0" 200 150'
 
@@ -43,7 +44,6 @@ novlogs= open('novlogs.log', 'w')
 declogs= open('declogs.log', 'w')
 
 
-month_dict = {}
 for line in open('logfile.log'):
     if re.search(jan_pattern,line):
         jan +=1 
@@ -82,18 +82,30 @@ for line in open('logfile.log'):
         dec +=1 
         declogs.write(line)
 
-print = ('Total responses in January were', jan)
-print = ('Total responses in Febuary were', feb)
-print = ('Total responses in March were', mar)
-print = ('Total responses in April were', apr)
-print = ('Total responses in May were', may)
-print = ('Total responses in June were', jun)
-print = ('Total responses in July were', jul)
-print = ('Total responses in August were', aug)
-print = ('Total responses in September were', sep)
-print = ('Total responses in October were', oct)
-print = ('Total responses in November were', nov)
-print = ('Total responses in December were', dec)
+print('Total requests in January were:', jan)
+print('There was an average of',math.ceil(jan/4),'requests per week in January')
+print('Total requests in Febuary were:', feb)
+print('There was an average of',math.ceil(feb/4),'requests per week in Februrary')
+print('Total requests in March were:', mar)
+print('There was an average of',math.ceil(mar/4),'requests per week in March')
+print('Total requests in April were:', apr)
+print('There was an average of',math.ceil(apr/4),'requests per week in April')
+print('Total requests in May were:', may)
+print('There was an average of',math.ceil(may/4),'requests per week in May')
+print('Total requests in June were:', jun)
+print('There was an average of',math.ceil(jun/4),'requests per week in June')
+print('Total requests in July were:', jul)
+print('There was an average of',math.ceil(jul/4),'requests per week in July')
+print('Total requests in August were:', aug)
+print('There was an average of',math.ceil(aug/4),'requests per week in August')
+print('Total requests in September were:', sep)
+print('There was an average of',math.ceil(sep/4),'requests per week in September')
+print('Total requests in October were:', oct)
+print('There was an average of',math.ceil(oct/4),'requests per week in October')
+print('Total requests in November were:', nov)
+print('There was an average of',math.ceil(nov/4),'requests per week in November')
+print('Total requests in December were:', dec)
+print('There was an average of',math.ceil(dec/4),'requests per week in December')
 
 
     
