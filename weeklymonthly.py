@@ -22,7 +22,7 @@ for line in open('logfile.log')
 for line in open('logfile.log')
     monthly = re.search(monthly_pattern, line)
     try:
-        bymonth = bymonth.groups()
+        bymonth = monthly.groups()
     except AttributeError
         bymonth = 
     if bymonth in Regexp:
