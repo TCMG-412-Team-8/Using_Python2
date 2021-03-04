@@ -3,7 +3,7 @@ from collections import Counter
 
 log_line = 'local - - [24/Oct/1994:13:41:41 -0600] "GET index.html HTTP/1.0" 200 150'
 
-pattern= r'\s[0-z]+.[a-z]+'
+pattern= r'[0-z]+.[a-z]+'
 
 Regexp ={}
 
